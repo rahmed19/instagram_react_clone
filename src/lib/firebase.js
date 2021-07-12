@@ -1,7 +1,7 @@
 import Firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
-import FirebaseContext from '../context/firebase'
+import { seedDatabase } from '../seed'
 
 const config = {
     apiKey: process.env.REACT_APP_API_KEY,
@@ -14,5 +14,5 @@ const config = {
 
 const firebase = Firebase.initializeApp(config)
 const { FieldValue } = Firebase.firestore
-console.log('firebase', firebase)
+
 export { firebase, FieldValue }
