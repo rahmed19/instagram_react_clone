@@ -6,3 +6,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+//client side rendered app (create react app)
+// database: firebase
+// styling: tailwind
+// architecture:
+  // - components, constants, context, helpers, lib, services
