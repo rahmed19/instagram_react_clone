@@ -18,8 +18,11 @@ export default function Login() {
     }, [])
 
     return (
-        <div>
-            <p>I am the login page</p>
+        <div className="container flex mx-auto max-w-screen-md items-center h-screen">
+            <div className="flex w-3/5">
+                <img src="/images/iphone-with-profile.jpg" className="max-w-md"></img>
+            </div>
+            <div className="flex flex-col w-25">I'll be the form</div>
         </div>
     )
 }
