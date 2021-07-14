@@ -22,7 +22,9 @@ export default function Login() {
             <div className="flex w-3/5">
                 <img src="/images/iphone-with-profile.jpg" className="max-w-md"></img>
             </div>
-            <div className="flex flex-col w-25">I'll be the form</div>
+            <h1 className="flex justify-center w-full">
+                <img src="/images/logo.png" alt="instagram" className="mt2 w-6/12"></img>
+            </h1>
         </div>
     )
 }
