@@ -23,7 +23,7 @@ export default function Login() {
                 <img src="/images/iphone-with-profile.jpg" className="max-w-md"></img>
             </div>
             <div className="flex flex-col w-2/5">
-                <div className="flex flex-col">
+                <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
                     <h1 className="flex justify-center w-full">
                         <img src="/images/logo.png" alt="instagram" className="mt2 w-6/12"></img>
                     </h1>
