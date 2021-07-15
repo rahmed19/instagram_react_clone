@@ -26,6 +26,15 @@ export default function Login() {
                 <img src="/images/logo.png" alt="instagram" className="mt2 w-6/12"></img>
             </h1>
             {error && <p className="mb-4 text-xs text-red-primary">{error}</p>}
+
+            <form onSubmit={handleLogin} method="POST">
+                <input
+                    aria-label="Enter your email address"
+                    type="text"
+                    placeholder="Email Address"
+                    className="text-sm text-gray-base"
+                />
+            </form>
         </div>
     )
 }
