@@ -1,6 +1,7 @@
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import FirebaseContext from '../context/firebase'
 import { useContext, useState, useEffect } from 'react'
+import * as ROUTES from '../constants/routes'
 
 export default function Login() {
     const history = useHistory()
@@ -23,7 +24,7 @@ export default function Login() {
                 <img src="/images/iphone-with-profile.jpg" className="max-w-md"></img>
             </div>
             <div className="flex flex-col w-2/5">
-                <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
+                <div className="flex flex-col items-center bg-white p-4 rounded border border-gray-primary mb-4">
                     <h1 className="flex justify-center w-full">
                         <img src="/images/logo.png" alt="instagram" className="mt2 w-6/12"></img>
                     </h1>
@@ -49,14 +50,16 @@ export default function Login() {
                             disabled={isInvalid}
                             type="submit"
                             className={
-                                `text-white bg-blue-500 w-full rounded h-8 font-bold
+                                `text-white bg-blue-medium w-full rounded h-8 font-bold
                             ${isInvalid && 'opacity-50'}`}>Log In</button>
                     </form>
                 </div>
-                <div className="flex justify-center items-center flex-col w-full bg-white p-4 border border-gray-primary">
+                <div className="flex justify-center items-center flex-col w-full bg-white p-4 rounded border border-gray-primary">
                     <p className="text-sm">
-                        Don't have an account? {``}
+                        Don't have an account? {` `}
+                        <Link to={ROUTES.SIGN_UP} className="font-bold text-blue-medium">Sign up</Link>
                     </p>
+
                 </div>
             </div>
         </div>
