@@ -26,6 +26,21 @@ export default function SignUp() {
                     .auth()
                     .createUserWithEmailAndPassword(emailAddress, password)
 
+                await createdUserResult.user.updateProfile({
+                    displayName: username
+                })
+
+                await firebase.firestore().collection('users').add({
+                    userId: createdUserResult.user.uid,
+                    username: username.toLocaleLowerCase(),
+                    fullName,
+                    emailAddress: emailAddress.toLowerCase(),
+                    following: [],
+                    dateCreated: Date.now()
+                })
+
+                history.push(ROUTES.DASHBOARD)
+
             } catch (error) {
 
             }
