@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import * as ROUTES from './constants/routes'
 
 const Login = lazy(() => import('./pages/login'))
-const Signup = lazy(() => import('./pages/signup'))
+const Signup = lazy(() => import('./pages/sign-up'))
 
 function App() {
   return (
