@@ -2,6 +2,7 @@ import { useHistory, Link } from 'react-router-dom'
 import FirebaseContext from '../context/firebase'
 import { useContext, useState, useEffect } from 'react'
 import * as ROUTES from '../constants/routes'
+import { doesUsernameExist } from '../services/firebase'
 
 export default function SignUp() {
     const history = useHistory()
@@ -17,13 +18,18 @@ export default function SignUp() {
 
     const handleSignUp = async (event) => {
         event.preventDefault()
+        const usernameExists = doesUsernameExist(username)
 
-        // try {
+        if (usernameExists) {
+            try {
+                const createdUserResult = await firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(emailAddress, password)
 
+            } catch (error) {
 
-        // } catch (error) {
-
-        // }
+            }
+        }
     }
 
     useEffect(() => {
